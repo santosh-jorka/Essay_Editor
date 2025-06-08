@@ -1,7 +1,5 @@
 # Essay Improvement Tool
 
-A modern Angular application that helps users improve their essays by providing real-time text highlighting and replacement functionality. The application features a responsive design that works seamlessly across desktop, tablet, and mobile devices.
-
 ## Features
 
 ### Core Functionality
@@ -43,10 +41,6 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd Medical-Word-App
-   ```
 
 2. Install dependencies:
    ```bash
@@ -104,15 +98,6 @@ The project includes comprehensive unit tests for:
 - UI state management
 - Edge cases handling
 
-## Browser Support
-
-The application is tested and supported on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome for Android)
-
 ## Responsive Design
 
 The application uses a mobile-first approach with three main breakpoints:
@@ -133,37 +118,3 @@ The application uses a mobile-first approach with three main breakpoints:
 - Enhanced hover states
 - Keyboard shortcuts (coming soon)
 
-## Known Issues
-
-- PowerShell Execution Policy: If you encounter script execution issues, run:
-  ```powershell
-  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-  ```
-
-## Future Enhancements
-
-Planned features for future releases:
-- [ ] Undo/Redo functionality
-- [ ] Multiple text replacements at once
-- [ ] Export/Import essay functionality
-- [ ] Rich text formatting
-- [ ] Keyboard shortcuts
-- [ ] Dark mode support
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Angular team for the excellent framework
-- Tailwind CSS for the utility-first CSS framework
-- The open-source community for inspiration and support
