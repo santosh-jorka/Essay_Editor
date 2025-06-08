@@ -1,23 +1,41 @@
-import { TestBed } from '@angular/core/testing';
-import { App } from './app';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from './app';
 
-describe('App', () => {
+describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [AppComponent]
     }).compileComponents();
-  });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(App);
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Medical-Word-App');
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should handle text highlighting updates', () => {
+    const text = 'test text';
+    component.onTextToHighlight(text);
+    expect(component.currentHighlightText).toBe(text);
+  });
+
+  it('should handle text replacement', () => {
+    const originalText = 'The quick brown fox';
+    const replacement = {
+      originalText: 'quick brown',
+      replacementText: 'fast red'
+    };
+
+    component.essayText = originalText;
+    component.onApplyChange(replacement);
+    
+    expect(component.essayText).toBe('The fast red fox');
+    expect(component.currentHighlightText).toBe('');
   });
 });
